@@ -1,0 +1,33 @@
+create database interview;
+use interview;
+
+create table interviewer(ID int NOT NULL AUTO_INCREMENT,
+    last_name varchar(255),
+    first_name varchar(255),
+    years_of_experience int,
+    education varchar(255),
+    self_intro varchar(2500),
+    status varchar(50) default 'ACTIVE',
+    PRIMARY KEY (ID));
+      
+insert into interviewer (lastName,firstName,yearsOfExperience,education,selfIntro) values ('test','test',1,'B.E','Am an software engineer');
+    
+    SELECT * FROM interviewer;
+    
+alter table interviewer add column(active boolean default true);
+
+alter table interviewer drop column lastName,drop column firstName,drop column yearsOfExperience,drop column selfIntro ;
+
+
+
+
+create table candidate(ID int NOT NULL AUTO_INCREMENT,
+    last_name varchar(255),
+    first_name varchar(255),
+    years_of_experience int,
+    education varchar(255),
+    self_intro varchar(2500),
+    status varchar(50) default 'ACTIVE',
+    PRIMARY KEY (ID));
+    
+    SELECT * FROM candidate;
